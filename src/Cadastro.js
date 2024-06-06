@@ -1,4 +1,3 @@
-// Cadastro.js
 import React, { useState } from 'react';
 
 function Cadastro({ onCadastro }) {

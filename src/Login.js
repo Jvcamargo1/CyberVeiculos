@@ -1,9 +1,8 @@
-// Login.js
 import React, { useState } from 'react';
 import './Login.css';
 import Cadastro from './Cadastro';
 
-function Login({ onLogin, onCadastro }) { // Certifique-se de receber a prop onCadastro
+function Login({ onLogin, onCadastro }) { 
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [mostrarCadastro, setMostrarCadastro] = useState(false);
@@ -30,7 +29,7 @@ function Login({ onLogin, onCadastro }) { // Certifique-se de receber a prop onC
         <input type="password" placeholder="Senha" value={senha} onChange={(e) => setSenha(e.target.value)} />
         <button type="submit">Entrar</button>
         <button type="button" onClick={handleCadastroClick}>Cadastro</button>
-        {mostrarCadastro && <Cadastro onCadastro={onCadastro} />} {/* Aqui você passa a prop onCadastro */}
+        {mostrarCadastro && <Cadastro onCadastro={onCadastro} />} {/* Aq passa a prop onCadastro */}
       </form>
     </div>
   );

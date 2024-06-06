@@ -1,6 +1,5 @@
-// Carro.js
 import React, { useState } from 'react';
-import './Carro.css'; // Certifique-se de que o CSS está sendo importado
+import './Carro.css';
 
 function Carro({ id, marca, modelo, ano, quilometragem, valor, onAlugar, usuarioLogado }) {
   const [alugado, setAlugado] = useState(false);
@@ -14,7 +13,7 @@ function Carro({ id, marca, modelo, ano, quilometragem, valor, onAlugar, usuario
     }
   };;
 
-  // Caminho para a imagem do carro, assumindo que as imagens estão na pasta public
+  // Caminho para a imagem do carro
   const imageUrl = `/images/${id}.jpg`;
 
   const buttonClasses = `btn-alugar ${alugado && usuarioLogado ? 'btn-alugado' : ''}`;

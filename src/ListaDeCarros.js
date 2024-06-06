@@ -1,4 +1,3 @@
-// ListaDeCarros.js
 import React from 'react';
 import Carro from './Carro';
 import './App.css'; 

@@ -1,7 +1,6 @@
-/* App.css */
 body {
   font-family: Arial, sans-serif;
-  background-color: #3b3b3b; /* Adicionando um fundo claro para o corpo */
+  background-color: #3b3b3b;
 }
 
 header, footer {
@@ -12,29 +11,27 @@ header, footer {
 }
 
 button {
-  /* Estilos gerais para botões (pra adicionar caso eu queira) */
   /* ... */
 }
 
-/* Adicionando um container para os cartões de carros */
 .carros-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly; /* Isso irá distribuir os cartões uniformemente */
+  justify-content: space-evenly;
 }
 
 .carro-card {
-  width: calc(100% - 20px); /* Ajusta a largura para metade da linha, subtraindo a margem */
-  margin: 10px; /* Margem entre os cartões */
-  box-sizing: border-box; /* Inclui a margem e o padding no cálculo da largura */
+  width: calc(100% - 20px); 
+  margin: 10px; 
+  box-sizing: border-box; 
 }
 
 .logo {
-  height: 140px; /* ou a altura que desejar */
-  margin: 20px 0; /* ajuste conforme necessário */
+  height: 140px; 
+  margin: 20px 0; 
 }
 
 
 .lista-veiculos {
-  color: rgb(187, 187, 187); /* Isso irá definir a cor da fonte para branco */
+  color: rgb(187, 187, 187); 
 }

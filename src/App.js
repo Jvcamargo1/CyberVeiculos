@@ -27,7 +27,7 @@ function App() {
       alert('Efetue o login para alugar um carro.');
       return;
     }
-    // Lógica de aluguel aqui
+    // Lógica de aluguel
     alert(`Aluguel do veículo ${id} efetuado com sucesso!`);
   };
 

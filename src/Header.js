@@ -5,7 +5,7 @@ function Header() {
   return (
     <header>
       <img src={logo} alt="CyberVeículos - Aluguel de Veículos" className="logo" />
-      {/* Outros elementos do cabeçalho */}
+      {/* Outros */}
     </header>
   );
 }
