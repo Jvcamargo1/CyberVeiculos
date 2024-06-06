@@ -5,7 +5,7 @@ import './App.css';
 import ListaDeCarros from './ListaDeCarros';
 import Cadastro from './Cadastro';
 import Login from './Login';
-import logo from './logo.png';
+import logo from './logo.jpg';
 
 function App() {
   const [usuarioLogado, setUsuarioLogado] = useState(false);
