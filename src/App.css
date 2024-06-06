@@ -1,0 +1,30 @@
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Adicionando um fundo claro para o corpo */
+}
+
+header, footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+button {
+  /* Estilos gerais para botões */
+  /* ... */
+}
+
+/* Adicionando um container para os cartões de carros */
+.carros-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* Isso irá distribuir os cartões uniformemente */
+}
+
+.carro-card {
+  width: calc(100% - 20px); /* Ajusta a largura para metade da linha, subtraindo a margem */
+  margin: 10px; /* Margem entre os cartões */
+  box-sizing: border-box; /* Inclui a margem e o padding no cálculo da largura */
+}

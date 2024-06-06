@@ -1,0 +1,44 @@
+/* Carro.css */
+.carro-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+    transition: transform 0.2s;
+	width: calc(100% - 20px);
+    }
+
+  .carro-imagem {
+    width: 100%; /* Ajusta a largura da imagem para preencher o cartão */
+    height: 200px; /* Define uma altura fixa menor */
+    object-fit: cover; /* Garante que a imagem cubra o espaço disponível */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .carro-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .carro-info {
+    flex: 1;
+  }
+  
+  .btn-alugar {
+    background-color: #5cb85c;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+  }
+  
+  .btn-alugar:hover {
+    background-color: #4cae4c;
+  }
+  
