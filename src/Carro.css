@@ -38,7 +38,12 @@
     text-transform: uppercase;
   }
   
-  .btn-alugar:hover {
-    background-color: #4cae4c;
+  .btn-alugado, .btn-alugado:hover {
+    background-color: #d9534f; 
   }
+  
+  .btn-alugar:hover {
+    background-color: #4cae4c; 
+  }
+  
   

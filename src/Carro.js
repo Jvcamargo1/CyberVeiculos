@@ -1,14 +1,23 @@
 // Carro.js
-import React from 'react';
+import React, { useState } from 'react';
 import './Carro.css'; // Certifique-se de que o CSS está sendo importado
 
-function Carro({ id, marca, modelo, ano, quilometragem, valor, onAlugar }) {
+function Carro({ id, marca, modelo, ano, quilometragem, valor, onAlugar, usuarioLogado }) {
+  const [alugado, setAlugado] = useState(false);
+
   const handleAlugar = () => {
-    onAlugar(id);
-  };
+    if (usuarioLogado) {
+      onAlugar(id);
+      setAlugado(true);
+    } else {
+      alert('Por favor, faça login para alugar um carro.');
+    }
+  };;
 
   // Caminho para a imagem do carro, assumindo que as imagens estão na pasta public
   const imageUrl = `/images/${id}.jpg`;
+
+  const buttonClasses = `btn-alugar ${alugado && usuarioLogado ? 'btn-alugado' : ''}`;
 
   return (
     <div className="carro-card">
@@ -19,7 +28,9 @@ function Carro({ id, marca, modelo, ano, quilometragem, valor, onAlugar }) {
         <p>Quilometragem: {quilometragem}</p>
         <p>Valor: R${valor}</p>
       </div>
-      <button className="btn-alugar" onClick={handleAlugar}>Alugar</button>
+      <button className={buttonClasses} onClick={handleAlugar} disabled={alugado}>
+        {alugado ? 'Alugado' : 'Alugar'}
+      </button>
     </div>
   );
 }

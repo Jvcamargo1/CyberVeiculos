@@ -34,14 +34,25 @@ function App() {
   const handleCadastro = (nome, email, senha, endereco) => {
     const novoUsuario = { nome, email, senha, endereco };
     const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    const usuarioExistente = usuarios.some(u => u.email === email);
+    if (usuarioExistente) {
+      alert('Usuário já cadastrado com este e-mail.');
+      return;
+    }
     usuarios.push(novoUsuario);
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
     alert('Cadastro realizado com sucesso!');
   };
 
   const handleLogin = (email, senha) => {
-    // Lógica de login aqui
-    setUsuarioLogado(true);
+    const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    const usuarioEncontrado = usuarios.find(u => u.email === email && u.senha === senha);
+    if (usuarioEncontrado) {
+      setUsuarioLogado(true);
+      alert('Login realizado com sucesso!');
+    } else {
+      alert('Usuário ou senha incorretos.');
+    }
   };
 
   return (
@@ -49,7 +60,7 @@ function App() {
       <Header />
       {!usuarioLogado && <Login onLogin={handleLogin} onCadastro={handleCadastro} />}
       <div className="carros-container">
-        <ListaDeCarros carros={carros} onAlugar={handleAlugar} />
+      <ListaDeCarros carros={carros} onAlugar={handleAlugar} usuarioLogado={usuarioLogado} />
       </div>
       <Footer />
     </div>
